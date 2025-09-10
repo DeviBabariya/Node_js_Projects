@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural -Contact</title>
+  <style>
+    /* Common Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* Header */
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #384b381a;
+    }
+
+    .header-inner {
+      justify-content: space-between;
+    }
+
+    .header-menu a {
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 400;
+      letter-spacing: .7px;
+      margin-left: 22px;
+      color: #384b38;
+    }
+
+    .header-menu a:hover {
+      color: #be842d;
+      transition: all 0.5 ease-in-out;
+    }
+
+    .header-menu a.active {
+      color: #be842d;
+    }
+
+
+    /* Contact */
+
+    .banner {
+      background-image: linear-gradient(#00000080, #00000080), url("https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/661e29c0581120a154ab496a_3%20(1).webp");
+      height: 380px;
+      background-repeat: no-repeat;
+      background-size: auto, cover;
+      background-position: center;
+      filter: brightness(0.9);
+    }
+
+    .banner h2 {
+      color: #fff;
+      font-size: 72px;
+      font-weight: 400;
+      max-width: 1220px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 70px;
+    }
+
+    .banner p {
+      color: #fff;
+      max-width: 660px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 30px;
+      margin-bottom: 50px;
+      letter-spacing: .5px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .contact-details {
+      margin-top: 50px;
+      max-height: 1000px;
+    }
+
+    .details-img {
+      padding: 20px;
+
+    }
+
+    .details {
+      padding: 20px;
+    }
+
+    .details h3 {
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.2em;
+      margin-top: 20px;
+    }
+
+    .details p {
+      color: #384b38;
+      letter-spacing: .5px;
+      margin-top: 15px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.5em;
+    }
+
+    .details span {
+      display: block;
+      color: #afdfaa;
+      text-transform: capitalize;
+      margin: 15px 0 7px 0;
+      font-weight: 500;
+    }
+
+    .details a {
+      display: block;
+      font-size: 19px;
+      padding-left: 2px;
+      color: #384b38;
+      font-weight: 500;
+    }
+
+    .details a:hover{
+      color: #afdfaa;
+      transition: .5s all;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="header-inner d-flex">
+          <div class="header-logo">
+            <a href="/">
+              <img src="https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/6614050d040dbc37848db66b_Logo%202.svg"
+              alt="logo" width="125px">
+            </a>
+          </div>
+          <div class="header-menu" id="header-menu">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact" class="active">Contact</a>
+            <a href="/projects">Projects</a>
+            <a href="/service">Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Section -->
+
+  <div class="contact-section">
+    <div class="row">
+      <div class="col">
+        <div class="banner">
+          <h2>Contact Us</h2>
+          <p>Saving nature is crucial for preserving biodiversity, maintaining healthy ecosystems, and ensuring the
+            well-being of future generations.</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="container">
+          <div class="contact-details d-flex">
+            <div class="details-img">
+              <img
+                src="https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/661e29b373c7ba947ed400d9_2%20(1).webp"
+                alt="contact-img" width="545px" height="415px">
+            </div>
+            <div class="details">
+              <h3>Let's Get Started</h3>
+              <p>Trees are the silent giants of our planet, towering above us with their majestic branches and providing
+                us with essential oxygen, shade, and beauty.</p>
+              <span style="margin-bottom: 10px;">Address</span>
+              <a href="#">14 Tottenham Road, London, England</a>
+              <span>Phone</span>
+              <a href="#">+3220 102 10 22</a>
+              <span>Email</span>
+              <a href="#">natural-help@example.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script>
+  const currentPage = window.location.pathname;
+  const menuLinks = document.querySelectorAll(".header-menu a");
+
+  menuLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
+</html>

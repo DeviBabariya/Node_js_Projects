@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Natural -Home</title>
+  <style>
+    /* Common Styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5faf6;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    /* Header */
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #384b381a;
+    }
+
+    .header-inner {
+      justify-content: space-between;
+    }
+
+    .header-menu a {
+      text-decoration: none;
+      font-size: 21px;
+      font-weight: 400;
+      letter-spacing: .7px;
+      margin-left: 22px;
+      color: #384b38;
+    }
+
+    .header-menu a:hover {
+      color: #be842d;
+      transition: all 0.5 ease-in-out;
+    }
+
+    .header-menu a.active {
+       color: #be842d;
+    }
+
+    /* About Section */
+
+    .about-inner {
+      margin: 50px;
+      position: relative;
+    }
+
+    .about-inner h2 {
+      font-size: 72px;
+      font-weight: 400;
+    }
+
+    .about-inner p {
+      color: #384b38;
+      max-width: 860px;
+      font-size: 18px;
+      margin-top: 20px;
+      margin-bottom: 50px;
+      letter-spacing: .5px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    .about-img{
+      margin-bottom: 30px;
+    }
+
+    .img-2{
+      position: absolute;
+      right:100px;
+      top: 160px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="header-inner d-flex">
+          <div class="header-logo">
+             <a href="/">
+              <img src="https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/6614050d040dbc37848db66b_Logo%202.svg"
+              alt="logo" width="125px">
+            </a>
+          </div>
+          <div class="header-menu" id="header-menu">
+            <a href="/">Home</a>
+            <a href="/about" class="active">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/projects">Projects</a>
+            <a href="/service">Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--About Section -->
+
+  <div class="about-section">
+    <div class="row">
+      <div class="col">
+        <div class="container">
+          <div class="about-inner">
+            <h2>About Us</h2>
+            <p>From reforestation initiatives and habitat restoration projects to marine conservation efforts and
+              sustainable agriculture practices, these projects span a wide range of approaches and scales.</p>
+          </div>
+          <div class="img-2">
+            <img
+              src="https://res.cloudinary.com/dxjko2dom/image/upload/v1757504516/Screenshot_2025-09-10_170913_m1wlkx.png"
+              alt="img" width="90%">
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="about-img">
+          <img src="https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/661ef58386faa787dfe0d4e4_Img%207.webp"
+            alt="main-img" width="100%" height="450px">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+<script>
+  const currentPage = window.location.pathname;
+  const menuLinks = document.querySelectorAll(".header-menu a");
+
+  menuLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+
+</html>
