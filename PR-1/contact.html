@@ -38,6 +38,10 @@
     .header {
       padding: 20px 0;
       border-bottom: 1px solid #384b381a;
+      position: sticky;
+      top: 0;
+      background-color: #f5faf6;
+      z-index: 1;
     }
 
     .header-inner {
@@ -72,6 +76,7 @@
       background-size: auto, cover;
       background-position: center;
       filter: brightness(0.9);
+      z-index: 9;
     }
 
     .banner h2 {
@@ -144,7 +149,7 @@
       font-weight: 500;
     }
 
-    .details a:hover{
+    .details a:hover {
       color: #afdfaa;
       transition: .5s all;
     }
@@ -159,8 +164,9 @@
         <div class="header-inner d-flex">
           <div class="header-logo">
             <a href="/">
-              <img src="https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/6614050d040dbc37848db66b_Logo%202.svg"
-              alt="logo" width="125px">
+              <img
+                src="https://cdn.prod.website-files.com/65c0df150844df102b9d81bb/6614050d040dbc37848db66b_Logo%202.svg"
+                alt="logo" width="125px">
             </a>
           </div>
           <div class="header-menu" id="header-menu">
