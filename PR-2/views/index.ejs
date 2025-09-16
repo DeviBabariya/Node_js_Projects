@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookSaw - Home</title>
+
+  <style>
+    /* Common Css */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #F3F2EC;
+    }
+
+    .container {
+      width: 1320px;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Header */
+
+    .header {
+      padding: 20px 10px;
+      border-bottom: 1px solid #E0E0E0;
+      background-color: #f3f2ec;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-logo img {
+      margin-left: 10px;
+    }
+
+    .header-controls a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #777777;
+    }
+
+    .header-controls a:hover {
+      color: #0e0d0d;
+      transition: all .1s ease-in-out;
+    }
+
+    .header-controls a.active {
+      color: #daa556;
+    }
+
+
+    .line {
+      width: 430px;
+      height: .5px;
+      background-color: #e0e0e0;
+      margin: 50px auto 0 auto;
+      border-radius: 2px;
+      align-items: center;
+    }
+    /* Card */
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 250px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      background-color: #EFEEE8;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .card button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 4px;
+      background-color: #daa556;
+      color: white;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .card button:hover {
+      background-color: #777777;
+      transition: all .1s ease-in-out;
+    }
+
+    .card p {
+      margin: 6px 0;
+      font-size: 17px;
+    }
+  </style>
+  </style>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="row">
+      <div class="header-logo">
+        <a href="/"><img src="https://themewagon.github.io/booksaw/images/main-logo.png" alt="logo"></a>
+      </div>
+      <div class="header-controls d-flex align-items-center ">
+        <a href="/">Home</a>
+        <a href="/add-book">Add Book</a>
+      </div>
+    </div>
+  </div>
+
+      <div class="title d-flex ">
+        <div class="line"></div>
+      <h1 style="text-align: center; margin-bottom: 20px;  margin-top: 30px; font-family:'Times New Roman', Times, serif; color: #333333; font-size: 45px;">Popular Books</h1>
+      <div class="line"></div>
+    </div>
+
+  <div class="card-container">
+
+    <% books.forEach((book)=> { %>
+      <div class="card">
+        <img src="<%= book.img %>" alt="Book Image" width="219px" height="335px" />
+        <p><strong>ID:</strong>
+          <%= book.id %>
+        </p>
+        <p><strong>Title:</strong>
+          <%= book.title %>
+        </p>
+        <p><strong>Author:</strong>
+          <%= book.author %>
+        </p>
+        <p><strong>Genre:</strong>
+          <%= book.genre %>
+        </p>
+        <p><strong>Price:</strong> $<%= book.price %>
+        </p>
+        <a href="/edit-book/<%= book.id %>"><button>Edit</button></a>
+        <a href="/delete-book/<%= book.id %>"><button>Delete</button></a>
+      </div>
+      <% }) %>
+  </div>
+</body>
+<script>
+  const currentPage = window.location.pathname;
+  const menuLinks = document.querySelectorAll(".header-controls a");
+
+  menuLinks.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+</script>
+
+</html>
