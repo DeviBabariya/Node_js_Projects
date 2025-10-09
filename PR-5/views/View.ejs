@@ -10,12 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;600&display=swap"
     rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
       padding: 0;
@@ -25,11 +19,7 @@
     }
 
     .container {
-      max-width: 1400px !important;
-    }
-
-    .view {
-      max-width: 1100px !important;
+      max-width: 1200px !important;
     }
 
     .d-flex {
@@ -58,7 +48,7 @@
 
     .logo img {
       width: 130px;
-      margin-top: 5px;
+      margin-top:5px;
     }
 
     .nav-links {
@@ -81,10 +71,15 @@
       border-bottom: 2px solid #e31c25;
     }
 
+    .nav-links a:hover {
+      color: #e31c25;
+      border-bottom: 2px solid #e31c25;
+    }
+
 
     .back-btn {
       display: inline-block;
-      margin: 25px 0 20px 20px;
+      margin: 25px 0 20px 50px;
       padding: 8px 16px;
       background-color: #e31c25;
       color: #fff;
@@ -101,15 +96,16 @@
     }
 
 
-    .container {
+    .container-view {
       max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    .view{
+    .view {
       gap: 50px;
     }
+
     .movie {
       flex: 1;
       min-width: 280px;
@@ -120,14 +116,11 @@
       margin-bottom: 30px;
     }
 
-    .details{
-      margin-top: 70px;
-    }
-
-    .detail-row{
-      margin-top: 20px;
+    .detail-row {
+      margin-top: 10px;
       font-size: 21px;
     }
+
     .details h2 {
       font-family: 'Playfair Display', serif;
       font-size: 40px;
@@ -148,20 +141,25 @@
 
     .description {
       margin-top: 15px;
-      font-size:21px;
+      font-size: 21px;
       color: #000000;
       line-height: 1.7;
     }
 
+     p{
+      margin-top: 0;
+    }
   </style>
 </head>
 
 <body>
   <header class="main-header">
     <div class="container">
-      <a href="/" class="logo"><img
+      <a href="/" class="logo">
+        <img
           src="https://cdn.prod.website-files.com/600ee75084e3fe0e5731624c/65b6384089ec9e265952391f_bookmyshow-logo-vector-removebg-preview%20(1).png"
-          alt="logo" height="50px"></a>
+          alt="logo">
+      </a>
       <div class="nav-links">
         <a href="/">Home</a>
         <a href="/add">Add Movie</a>
@@ -169,38 +167,41 @@
     </div>
   </header>
 
-  <a href="/" class="back-btn">&larr; Back </a>
+    <div class="container">
+      <a href="/" class="back-btn">&larr; Back </a>
+    </div>
 
-  <div class="container view d-flex ">
+
+  <div class="container-view view d-flex ">
     <div class="view-wrapper">
       <img src="/<%= movie.image %>" alt="Movie Cover" class="movie" />
     </div>
-      <div class="details">
-        <h2>
-          <%= movie.title %>
-        </h2>
+    <div class="details">
+      <h2>
+        <%= movie.title %>
+      </h2>
 
-        <div class="detail-row"><span class="detail-label">Language:</span> <span class="detail-value">
-            <%= movie.director %>
-          </span></div>
-        <div class="detail-row"><span class="detail-label">Genre:</span> <span class="detail-value">
-            <%= movie.genre %>
-          </span></div>
-        <div class="detail-row"><span class="detail-label">Category:</span> <span class="detail-value">
-            <%= movie.category %>
-          </span></div>
-        <div class="detail-row"><span class="detail-label">Released Year:</span> <span class="detail-value">
-            <%= movie.year %>
-          </span></div>
+      <div class="detail-row"><span class="detail-label">Language:</span> <span class="detail-value">
+          <%= movie.language %>
+        </span></div>
+      <div class="detail-row"><span class="detail-label">Genre:</span> <span class="detail-value">
+          <%= movie.genre %>
+        </span></div>
+      <div class="detail-row"><span class="detail-label">Category:</span> <span class="detail-value">
+          <%= movie.category %>
+        </span></div>
+      <div class="detail-row"><span class="detail-label">Released Year:</span> <span class="detail-value">
+          <%= movie.year %>
+        </span></div>
 
-        <div class="description">
-          <span class="detail-label">Description:</span>
-          <p>
-            <%= movie.description %>
-          </p>
-        </div>
+      <div class="description">
+        <span class="detail-label">Description:</span>
+        <p>
+          <%= movie.description %>
+        </p>
       </div>
     </div>
+  </div>
   </div>
 
 </body>

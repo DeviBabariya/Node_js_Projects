@@ -6,7 +6,7 @@ const movieSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    director:
+    language:
     {
         type: String,
         required: true
