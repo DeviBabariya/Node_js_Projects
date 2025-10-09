@@ -173,10 +173,16 @@
             font-size: 14px;
             margin: 20px;
             transition: all 0.3s ease;
+            margin-left: 50px;
         }
 
         .category {
             margin-left: 70px;
+        }
+
+        .container-filter{
+            max-width: 1400px;
+            margin-left: 20px;
         }
 
         .filter-btn {
@@ -241,7 +247,7 @@
     </header>
 
     <div class="filter-section ">
-        <div class="container d-flex">
+        <div class="container-filter d-flex">
             <div class="category">
                 <div class="mb-3">
                     <form action="/" method="get" style="display:inline-block;">
@@ -273,8 +279,6 @@
 
 
             <div class="search">
-
-                <!-- search -->
                 <div class="search-bar mt-5">
                     <form class="d-flex">
                         <input type="text" name="search" placeholder="Title, Language, Genre" />
