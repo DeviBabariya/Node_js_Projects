@@ -1,0 +1,1483 @@
+{
+	"info": {
+		"_postman_id": "3637113e-5031-4667-8bf9-3be872799222",
+		"name": "E-Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47314555",
+		"_collection_link": "https://devibabariyarnw-8275005.postman.co/workspace/Devi-Babariya's-Workspace~f40784f9-a5b8-455f-806d-2a4605ee85a7/collection/47314555-3637113e-5031-4667-8bf9-3be872799222?action=share&source=collection_link&creator=47314555"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "Smith",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Peter",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "smith@test.in",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "mobileno",
+									"value": "1234598765",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Male",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "User",
+									"type": "text"
+								},
+								{
+									"key": "profileImage",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/Person/pexels-italo-melo-881954-2379004.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "firstname",
+											"value": "Smith",
+											"type": "text"
+										},
+										{
+											"key": "lastname",
+											"value": "Peter",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "smith@test.in",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										},
+										{
+											"key": "mobileno",
+											"value": "1234598765",
+											"type": "text"
+										},
+										{
+											"key": "gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "role",
+											"value": "User",
+											"type": "text"
+										},
+										{
+											"key": "profileImage",
+											"type": "file",
+											"src": "/C:/Users/HP/Downloads/Person/pexels-italo-melo-881954-2379004.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "356"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"164-7ktFhKfse7GwO7otCMM1glk0E/4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 07:54:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"user\": {\n        \"firstname\": \"Smith\",\n        \"lastname\": \"Peter\",\n        \"email\": \"smith@test.in\",\n        \"password\": \"$2b$10$bUtAeaPlGTcP1lzHsu348eIHhQAkv.p4a.dLmd4qp3ci/X2wZrSDK\",\n        \"mobileno\": \"1234598765\",\n        \"profileImage\": \"/uploads/IMG-1765353291928.jpg\",\n        \"role\": \"User\",\n        \"gender\": \"Male\",\n        \"isDelete\": false,\n        \"_id\": \"6939274ca4504c40f1820e1c\",\n        \"__v\": 0\n    },\n    \"message\": \"User Added Successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "john@test.in",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "john@test.in",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "533"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"215-zU6Nd2MjCEMmQwtKw2W5DMSbV3o\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 07:59:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Login Success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg\",\n    \"user\": {\n        \"_id\": \"693926c9a4504c40f1820e16\",\n        \"firstname\": \"John\",\n        \"lastname\": \"Peter\",\n        \"email\": \"john@test.in\",\n        \"password\": \"$2b$10$/fK3Q3KZkKeXGejlokVx8uXpsZZO0PNxZ7yK5i/uxhKuMMqf.7RKq\",\n        \"mobileno\": \"1234598765\",\n        \"profileImage\": \"/uploads/IMG-1765353161482.jpeg\",\n        \"role\": \"Admin\",\n        \"gender\": \"Male\",\n        \"isDelete\": false,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/api/auth/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/api/auth/profile",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"auth",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "279"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"117-gN9V2iFIFFjkmBa6yN6Qc85JC14\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:00:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User Profile Fetched\",\n    \"data\": {\n        \"_id\": \"693926c9a4504c40f1820e16\",\n        \"firstname\": \"John\",\n        \"lastname\": \"Peter\",\n        \"email\": \"john@test.in\",\n        \"mobileno\": \"1234598765\",\n        \"profileImage\": \"/uploads/IMG-1765353161482.jpeg\",\n        \"role\": \"Admin\",\n        \"gender\": \"Male\",\n        \"isDelete\": false,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "edit-admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "lastname",
+									"value": "peters",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/admin/edit-admin/693926c9a4504c40f1820e16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"admin",
+								"edit-admin",
+								"693926c9a4504c40f1820e16"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "lastname",
+											"value": "peters",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/admin/edit-admin/693926c9a4504c40f1820e16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"admin",
+										"edit-admin",
+										"693926c9a4504c40f1820e16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-262yG/q+cRWvDyh6lpzgCTqzf4g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:04:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Admin updated successfully\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "view user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/api/user/view-user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"user",
+								"view-user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/api/user/view-user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"user",
+										"view-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "965"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c5-W+Ch3Na4M/oUG9Gju5xiaIUQgXA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:06:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Users fetched successfully\",\n    \"status\": \"200\",\n    \"result\": [\n        {\n            \"_id\": \"693926c9a4504c40f1820e16\",\n            \"firstname\": \"John\",\n            \"lastname\": \"Peter\",\n            \"email\": \"john@test.in\",\n            \"password\": \"$2b$10$/fK3Q3KZkKeXGejlokVx8uXpsZZO0PNxZ7yK5i/uxhKuMMqf.7RKq\",\n            \"mobileno\": \"1234598765\",\n            \"profileImage\": \"/uploads/IMG-1765353161482.jpeg\",\n            \"role\": \"Admin\",\n            \"gender\": \"Male\",\n            \"isDelete\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"69392719a4504c40f1820e19\",\n            \"firstname\": \"Jolly\",\n            \"lastname\": \"Peter\",\n            \"email\": \"jolly@test.in\",\n            \"password\": \"$2b$10$13H1aKCQYpP1l0t9/yAGP.EYpI3oTRVN6pzO8s51Pgmhw55eecP/.\",\n            \"mobileno\": \"1234598765\",\n            \"profileImage\": \"/uploads/IMG-1765353241883.jpg\",\n            \"role\": \"User\",\n            \"gender\": \"Female\",\n            \"isDelete\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6939274ca4504c40f1820e1c\",\n            \"firstname\": \"Smith\",\n            \"lastname\": \"Peter\",\n            \"email\": \"smith@test.in\",\n            \"password\": \"$2b$10$bUtAeaPlGTcP1lzHsu348eIHhQAkv.p4a.dLmd4qp3ci/X2wZrSDK\",\n            \"mobileno\": \"1234598765\",\n            \"profileImage\": \"/uploads/IMG-1765353291928.jpg\",\n            \"role\": \"User\",\n            \"gender\": \"Male\",\n            \"isDelete\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "edit user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "lastname",
+									"value": "Williams",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/user/edit-user/6939274ca4504c40f1820e1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"user",
+								"edit-user",
+								"6939274ca4504c40f1820e1c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "lastname",
+											"value": "Williams",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/user/edit-user/6939274ca4504c40f1820e1c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"user",
+										"edit-user",
+										"6939274ca4504c40f1820e1c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-AlCrc7JI5a65TBU5mVM+ZUNNdsM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:07:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"user updated successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9001/api/user/delete-user/6939274ca4504c40f1820e1c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"user",
+								"delete-user",
+								"6939274ca4504c40f1820e1c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9001/api/user/delete-user/6939274ca4504c40f1820e1c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"user",
+										"delete-user",
+										"6939274ca4504c40f1820e1c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-7wgq4U8cA9ixOVFanN67KKDlqG4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:08:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"User soft deleted successfully!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "add-product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lipstick",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "4500",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "MakeUp",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "In Stock",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/rouge-allure-velvet-luminous-matte-lip-colour-69-abstrait-0-12oz--packshot-default-162690-8815720595486.avif"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/product/add-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"product",
+								"add-product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lipstick",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "4500",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "MakeUp",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "In Stock",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/HP/Downloads/rouge-allure-velvet-luminous-matte-lip-colour-69-abstrait-0-12oz--packshot-default-162690-8815720595486.avif"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/product/add-product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"product",
+										"add-product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-+Tc+OmQBXxTVtEuKCec3zteBScw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:13:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statu\": 200,\n    \"message\": \"Product added successfully!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "view all product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lipstick",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "4500",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "MakeUp",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "In Stock",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/rouge-allure-velvet-luminous-matte-lip-colour-69-abstrait-0-12oz--packshot-default-162690-8815720595486.avif"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/product/view-all-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"product",
+								"view-all-product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lipstick",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "4500",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "MakeUp",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "In Stock",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/HP/Downloads/rouge-allure-velvet-luminous-matte-lip-colour-69-abstrait-0-12oz--packshot-default-162690-8815720595486.avif"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/product/view-all-product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"product",
+										"view-all-product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1293"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50d-CE4CjKNfnA5vXPugEWbap68jSFI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:17:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"All products fetched successfully!\",\n    \"products\": [\n        {\n            \"isDeleted\": false,\n            \"_id\": \"69385af81e1526acd6b9534e\",\n            \"title\": \"Lipstick\",\n            \"description\": \"Lipstick is an almost universal cosmetic since, together with the eyes, the mouth is a leading feature, and it can be attractively coloured and textured.\",\n            \"category\": \"Beauty\",\n            \"price\": 500,\n            \"productImage\": \"uploads/IMG-1765300984401.jpg\",\n            \"__v\": 0\n        },\n        {\n            \"isDeleted\": false,\n            \"_id\": \"69385b5a82c76e57dcdb9362\",\n            \"title\": \"Lipstick\",\n            \"description\": \"Lipstick is an almost universal cosmetic since, together with the eyes, the mouth is a leading feature, and it can be attractively coloured and textured.\",\n            \"category\": \"Beauty\",\n            \"price\": 800,\n            \"productImage\": \"uploads/IMG-1765301082928.jpg\",\n            \"user\": \"693850030ead102ff4d51e54\",\n            \"isDelete\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"69392bb2727a1fd56e36830f\",\n            \"name\": \"Lipstick\",\n            \"description\": \"ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR\",\n            \"price\": 4500,\n            \"category\": \"MakeUp\",\n            \"available\": \"In Stock\",\n            \"image\": \"/uploads/IMG-1765354418029.avif\",\n            \"isDeleted\": false,\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"69392c69727a1fd56e368313\",\n            \"name\": \"Samsung S24\",\n            \"description\": \"Samsung Galaxy S24 5G Snapdragon (Amber Yellow, 128 GB)  (8 GB RAM)\\n\",\n            \"price\": 45000,\n            \"category\": \"Electronics\",\n            \"available\": \"In Stock\",\n            \"image\": \"/uploads/IMG-1765354601259.jpg\",\n            \"isDeleted\": false,\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "single product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lipstick",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "4500",
+									"type": "text"
+								},
+								{
+									"key": "category",
+									"value": "MakeUp",
+									"type": "text"
+								},
+								{
+									"key": "available",
+									"value": "In Stock",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/HP/Downloads/rouge-allure-velvet-luminous-matte-lip-colour-69-abstrait-0-12oz--packshot-default-162690-8815720595486.avif"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/product/view-single-product/69385af81e1526acd6b9534e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"product",
+								"view-single-product",
+								"69385af81e1526acd6b9534e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Lipstick",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "ROUGE ALLURE VELVET LUMINOUS MATTE LIP COLOUR",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "4500",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "MakeUp",
+											"type": "text"
+										},
+										{
+											"key": "available",
+											"value": "In Stock",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/HP/Downloads/rouge-allure-velvet-luminous-matte-lip-colour-69-abstrait-0-12oz--packshot-default-162690-8815720595486.avif"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/product/view-single-product/69385af81e1526acd6b9534e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"product",
+										"view-single-product",
+										"69385af81e1526acd6b9534e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "388"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"184-qJ9vYM7Z+l1jetazanrAmVIxISw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:19:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Single Product Fetched\",\n    \"product\": {\n        \"isDeleted\": false,\n        \"_id\": \"69385af81e1526acd6b9534e\",\n        \"title\": \"Lipstick\",\n        \"description\": \"Lipstick is an almost universal cosmetic since, together with the eyes, the mouth is a leading feature, and it can be attractively coloured and textured.\",\n        \"category\": \"Beauty\",\n        \"price\": 500,\n        \"productImage\": \"uploads/IMG-1765300984401.jpg\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "edit product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "CHANEL Lipstick",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/product/edit-product/69385af81e1526acd6b9534e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"product",
+								"edit-product",
+								"69385af81e1526acd6b9534e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "CHANEL Lipstick",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/product/edit-product/69385af81e1526acd6b9534e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"product",
+										"edit-product",
+										"69385af81e1526acd6b9534e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "427"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ab-yFDM8Ru1gBTebYA975PfzwEt8e0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:21:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Product updated successfully!\",\n    \"updatedProduct\": {\n        \"isDeleted\": false,\n        \"_id\": \"69385af81e1526acd6b9534e\",\n        \"title\": \"Lipstick\",\n        \"description\": \"Lipstick is an almost universal cosmetic since, together with the eyes, the mouth is a leading feature, and it can be attractively coloured and textured.\",\n        \"category\": \"Beauty\",\n        \"price\": 500,\n        \"productImage\": \"uploads/IMG-1765300984401.jpg\",\n        \"__v\": 0,\n        \"name\": \"CHANEL Lipstick\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OTM5MjZjOWE0NTA0YzQwZjE4MjBlMTYiLCJpYXQiOjE3NjUzNTM1NDgsImV4cCI6MTc2NTQzOTk0OH0.Rv1FgsqDGJocFbsiKG2U36a3qX_G9r3zeApebLKXFtg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "CHANEL Lipstick",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9001/api/product/delete-product/69385af81e1526acd6b9534e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"api",
+								"product",
+								"delete-product",
+								"69385af81e1526acd6b9534e"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "CHANEL Lipstick",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:9001/api/product/delete-product/69385af81e1526acd6b9534e",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9001",
+									"path": [
+										"api",
+										"product",
+										"delete-product",
+										"69385af81e1526acd6b9534e"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-Zo6kvIVrHAEWWKfmCU590popUPI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 10 Dec 2025 08:22:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Product deleted successfully!\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
